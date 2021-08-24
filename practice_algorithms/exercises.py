@@ -35,3 +35,15 @@ def factorial(integer):
         return integer * (factorial(integer-1))
 
 print(factorial(4))
+
+# Write a Python program to get the sum of a non-negative integer.
+## sum_of_integer(231) =  1 + (sum_of_integer(23))
+## sum_of_integer(23) = 3 + (sum_of_integer(2))
+## sum_of_integer(2) = 2 + 0
+def sum_of_integer(n):
+    if n == 0:
+        return 0
+    else:
+        return n % 10 + sum_of_integer(int(n/10))
+
+print(sum_of_integer(231))
