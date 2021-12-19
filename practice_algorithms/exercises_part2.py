@@ -32,3 +32,17 @@ mangle_number = MangleNumber()
 mangle_number.calculate_reverse_number(1234)
 mangle_number.calculate_sum_of_digits(1234)
 mangle_number.count_num_of_digits(1234)
+print('-------------------------------')
+
+
+class Exercise2:
+    def swap_first_last(self, list_of_num: list) -> None:
+        size = len(list_of_num)
+        
+        temp = list_of_num[0]
+        list_of_num[0] = list_of_num[size-1]
+        list_of_num[size-1] = temp
+        return print(f'Swapped list is {list_of_num}')
+
+swap_list = Exercise2()
+swap_list.swap_first_last([1,2,3,4])
