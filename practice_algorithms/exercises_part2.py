@@ -38,11 +38,21 @@ print('-------------------------------')
 class Exercise2:
     def swap_first_last(self, list_of_num: list) -> None:
         size = len(list_of_num)
-        
+
         temp = list_of_num[0]
-        list_of_num[0] = list_of_num[size-1]
-        list_of_num[size-1] = temp
+        list_of_num[0] = list_of_num[size - 1]
+        list_of_num[size - 1] = temp
         return print(f'Swapped list is {list_of_num}')
 
-swap_list = Exercise2()
-swap_list.swap_first_last([1,2,3,4])
+    def count_vowels(self, word: str) -> None:
+        num_vowels = 0
+        for letters in word:
+            if (letters == 'a' or letters == 'e' or letters == 'i' or letters == 'o'
+                    or letters == 'u' or letters == 'A' or letters == 'E' or letters == 'I' or letters == 'O' or letters == 'U'):
+                num_vowels += 1
+        return print(f'Number of vowels are {num_vowels}')
+
+
+exercise2 = Exercise2()
+exercise2.swap_first_last([1, 2, 3, 4])
+exercise2.count_vowels("David")
